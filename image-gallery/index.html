@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Courgette&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/icons/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <header>
+        <h1>Image gallery</h1>
+        <div class="input-container">
+            <input type="text" id="search-input" placeholder="Write request..." onkeypress="handleKeyPress(event)" required>
+            <span class="clear-button">&#10006;</span>
+            <button class="search" onclick="searchPhotos()">Search</button>
+        </div>
+    </header>
+    <main>
+        <div id="photo-container"></div>
+        <div id="my-modal" class="modal">
+            <img src="assets/icons/arrow-left.svg" alt="previous" class="arrow-left" onclick="prevImage()">
+            <span class="close">&times;</span>
+            <img id="modal-img" class="modal-content">
+            <img src="assets/icons/arrow-right.svg" alt="next" class="arrow-right" onclick="nextImage()">
+          </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>2023</p>
+            <p class="github-link"><img src="./assets/icons/github-icon.png" alt="icon" class="icons">
+                <a href="https://github.com/NickIvn">NickIvn</a></p>
+            <p><a href="https://rs.school/js-stage0/"><img src="https://rs.school/images/rs_school_js.svg" alt="RS School logo" class="rss-school"></a></p>
+            <p class="link-about">About</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
